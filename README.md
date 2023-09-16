@@ -1,4 +1,4 @@
-# SpeacetoonMemorial
+# SpeacetoonMemory
 Take a trip down memory lane and relive the magic of the 90s with SpeacetoonMemorial. Immerse yourself in a nostalgic journey through a captivating memory test that evokes the essence of your childhood.
 Simple Angular Application reprsents Basic Features used Like Slider , Timer , Routing , Services
 
