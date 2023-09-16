@@ -1,0 +1,14 @@
+<div class="container-cartoons">
+  <button (click)="prev()" class="prev" [disabled]="currentindex === 0">prev</button>
+
+  <div class="contain-card" *ngFor="let c of cartoonlist" [style.display] = "c.display">
+    <img [src]="c.imgSrc" alt="{{ c.Name }}"  />
+    <hr />
+    <h2>{{ c.Name }}</h2>
+    <p>{{ c.type }}</p>
+    <button routerLink="/cartoondetails/{{c.id}}">show</button>
+
+  </div>
+
+  <button (click)="next()" class="next" [disabled]="currentindex === cartoonlist.length -4 ">></button>
+</div>

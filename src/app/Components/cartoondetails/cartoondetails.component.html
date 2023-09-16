@@ -1,0 +1,20 @@
+
+<div class="container-cartoon" *ngIf="cartoon">
+<div class="rowtransparent">
+<div  class="cartoondetails">
+  <div class="contain-img">
+  <img [src]="cartoon.imgSrc" alt="{{ cartoon.Name }}" />
+  </div>
+  <div class="contain-text">
+    <h2>{{ cartoon.Name }}</h2>
+  <p>{{ cartoon.type }}</p>
+
+  <p>{{ cartoon.Desc }}</p>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="row">
+  <app-topcartoons></app-topcartoons>
+</div>

@@ -1,0 +1,313 @@
+body{
+  background-color: rgb(2, 2, 38);
+  color: aliceblue;
+  font-family: fantasy;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.row{
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* navabr */
+nav img{
+  width: 80px;
+  height: auto;
+  float: left;
+}
+nav{
+  display: flex;
+  justify-content: center;
+}
+
+nav ul
+{
+  display: flex;
+  gap: 1rem;
+}
+
+nav ul li
+{
+  list-style-type: none;
+  cursor: pointer;
+}
+nav ul li a
+{
+  text-decoration: none;
+  color: aliceblue;
+  padding: 0.5rem ;
+  transition: background-color 0.3s;
+}
+nav ul li a:hover
+{
+  background-color: blue;
+}
+
+/* slider */
+
+.text-center{
+  text-align: center;
+}
+.font{
+  font-size: 4rem;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: aliceblue; */
+  /* background-image: url('assets/images/3.jpg'); */
+  color: black;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+  animation: changingimg alternate 8s infinite;
+  transition: animation 0.1s ease-in-out;
+}
+@keyframes changingimg{
+  0%{
+  background-image: url('assets/images/3.jpg');
+  background-position: 50%;
+
+background-size: cover;
+background-repeat: no-repeat;
+  }
+  25%{
+    background-image: url('assets/images/th.jpg');
+    background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+    }
+
+    35%{
+      background-image: url('assets/images/digimon.jpg');
+      background-position: 50%;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    45%{
+      background-image: url('assets/images/l 7deqa.jpg');
+      background-position: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    55%{
+    background-image: url('assets/images/em.jpg');
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
+    65%{
+      background-image: url('assets/images/polemon.jpg');
+      background-position: 50%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      }
+    100%{
+      background-image: url('assets/images/r.jpg');
+      background-position: 50%;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+}
+.contain-text{
+  width: 40%;
+}
+.transparent{
+  background-color: rgba(2, 2, 38, 0.8);
+  width: 100%;
+  height: auto;
+  color: aliceblue;
+}
+
+/* top cartoons */
+
+.container-cartoons{
+  display:  flex;
+  width: 1200px;
+  position: relative;
+}
+.container-cartoons .next{
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border: none;
+  position: absolute;
+  top: 8rem;
+  right: 0;
+  background-color: blue;
+  color: aliceblue;
+}
+.container-cartoons .prev{
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border: none;
+  position: absolute;
+  top: 8rem;
+  left: 0;
+  background-color: blue;
+  color: aliceblue;
+}
+.contain-card{
+  width: 23%;
+  margin: 1%;
+}
+.contain-card img{
+  width: 100%;
+  height: 250px;
+}
+
+/* details */
+
+.container-cartoon{
+  position: relative;
+  margin-bottom: 5rem;
+  animation: changingimg alternate 8s infinite;
+  transition: animation 0.1s ease-in-out;
+}
+@keyframes changingimg{
+  0%{
+  background-image: url('assets/images/3.jpg');
+  background-position: 50%;
+
+background-size: cover;
+background-repeat: no-repeat;
+  }
+  25%{
+    background-image: url('assets/images/th.jpg');
+    background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+    }
+
+    35%{
+      background-image: url('assets/images/digimon.jpg');
+      background-position: 50%;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    45%{
+      background-image: url('assets/images/l 7deqa.jpg');
+      background-position: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    55%{
+    background-image: url('assets/images/em.jpg');
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
+    65%{
+      background-image: url('assets/images/polemon.jpg');
+      background-position: 50%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      }
+    100%{
+      background-image: url('assets/images/r.jpg');
+      background-position: 50%;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .rowtransparent{
+    background-color: rgba(220, 220, 227, 0.5);
+  }
+.cartoondetails{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2%;
+  height: 70vh;
+position: relative;
+color: black;
+}
+.cartoondetails .contain-text h2{
+  font-size: 3rem;
+}
+.cartoondetails .contain-text{
+  width: 30%;
+  text-transform: capitalize;
+  margin-top:2rem ;
+}
+.contain-img{
+  position: absolute;
+  top: 12rem;
+  left: 9rem;
+}
+.cartoondetails .contain-img img{
+  width: 350px;
+  height: 50vh;
+
+}
+
+
+
+/* questions */
+.test-container{
+  background-color: black;
+  padding: 3rem;
+  font-size: 2rem;
+  font-family: 'Courier New', Courier, monospace;
+}
+.contain-info{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.getanswer{
+  background-color: aliceblue;
+  border: 1px solid grey;
+  color: black;
+}
+.getanswer:hover{
+  background-color: grey;
+  cursor: pointer;
+  color: aliceblue;
+}
+
+
+.scorepopup{
+  background-color: rgba(2, 2, 38, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  font-size: 4rem;
+}
+
+button{
+  cursor: pointer;
+  border: 1px solid white;
+  padding: 0.2rem 1.2rem;
+  background-color: blue;
+  color: aliceblue;
+  transition: background-color 0.3s ease-in-out;
+}
+button:hover{
+  background-color: rgb(207, 207, 214);
+  color: blue;
+
+}
+
+
+.mt-5{
+  margin-top: 7rem;
+}

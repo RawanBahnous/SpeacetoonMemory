@@ -1,0 +1,69 @@
+<div class="row">
+  <button (click)="openTest()">Try The Quiz</button>
+</div>
+
+<div class="test-container" [hidden]="!testpopUp">
+  <div class="contain-info">
+    <div class="col">
+      <h5>{{ points }} Points</h5>
+    </div>
+    <div class="col">
+      <h5>
+        Question {{ currentQiestion + 1 }} of {{ questionsLst.length - 1 }}
+      </h5>
+    </div>
+    <div class="col">
+      <h5>Counter {{ counter }}</h5>
+    </div>
+  </div>
+  <div class="contain-progress"></div>
+  <p>{{ questionsLst[currentQiestion].question }}</p>
+
+  <div class="contain-answers">
+    <ol *ngFor="let a of questionsLst[currentQiestion].Answers">
+      <li (click)="answer(currentQiestion + 1, a)">
+        <div class="getanswer">
+          {{ a }}
+        </div>
+      </li>
+    </ol>
+  </div>
+
+  <button [disabled]="currentQiestion === 0" (click)="prev()">Prev</button>
+  <button
+    [disabled]="currentQiestion === questionsLst.length - 1"
+    (click)="next()"
+  >
+    Next
+  </button>
+</div>
+
+<div
+  class="scorepopup"
+  *ngIf="!showScoreModal"
+  [ngStyle]="{ display: correctAnswers >= 7 ? 'block' : 'none' }"
+>
+  <div class="row mt-5">
+    <img src="../../../assets/images/onone.jpg" alt="" />
+  </div>
+  <div class="row">wahho you Remembring Old Days</div>
+  <div class="row">
+    your score : {{ correctAnswers }} / {{ questionsLst.length - 1 }}
+  </div>
+</div>
+
+<div
+  class="scorepopup"
+  *ngIf="!showScoreModal"
+  [ngStyle]="{ display: correctAnswers < 6 ? 'block' : 'none' }"
+>
+  <div class="row mt-5">
+    <img src="../../../assets/images/hun.jpg" alt="" />
+  </div>
+  <div class="row">So Sad that speacetoon does not raise you bro
+  </div>
+    <p>go and see some epic shows</p>
+  <div class="row">
+    You Scored : {{ correctAnswers }} / {{ questionsLst.length - 1 }}
+  </div>
+</div>
